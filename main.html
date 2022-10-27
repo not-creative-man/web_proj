@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="онлайн-школа дети программирование обучение дополнительное образование unity unreal engine" />
     <link rel="stylesheet" href="./main.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap" rel="stylesheet"> -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
 
     <title>Online-school "Educator"</title>
 </head>
@@ -18,139 +22,155 @@
     <header>
         <div class="header">
             <div class="logo">
-                <img alt="logo" src="./image/Logo.jpg">
+                <span>EDUCATOR</span>
             </div>
-            <div class="enter_button blue">
-                <button class="blue_butt" style="width:150px;
-                                                height:60px; 
-                                                border:1px solid #8DA2FF;
-                                                border-radius: 20px;
-                                                background-color: #8DA2FF;
-                                                display: flex;" onclick="modal = document.getElementById('modal_enter')
+            <nav>
+                <div>
+                    <a class="text text_blue" href="#second_part">О нас</a>
+                </div>
+                <div>
+                    <a class="text text_blue" href="#third_part">Регистрация</a>
+                </div>
+                <div>
+                    <a class="text text_blue" href="#footer">Контакты</a>
+                </div>
+            </nav>
+            <div class="enter_button">
+                <button class="button" onclick="modal = document.getElementById('modal_enter')
                                                         modal.style.opacity = 1
                                                         modal.style.visibility = 'visible'">
-                    <span class="text" style="margin:auto;">Войти</span>
+                    <span>Войти</span>
                 </button>
             </div>
         </div>
     </header>
     <main>
         <div class="first_part">
-            <div class="first_part_wrapper" style="margin-top: 120px;">
-                <h1 style="font-size: 96px; font-weight: 500;">Обучаем</h1>
-                <h1 style="color: black;">
-                    детей и подростков<br><span class="blue">профессиям будущего!</span>
+            <div>
+                <h1>
+                    Обучаем<br>детей и подростков<br><span class="text_blue">профессиям будущего</span>
                 </h1>
+                <div>
+                    <div class="button button_less" style="background-color: #F36A8D;"><span>#Unity</div></span>
+                    <div class="button button_less" style="margin:auto 15px; background-color: #F5BE27;"><span>#Unreal_Engine</span></div>
+                    <div class="button button_less" style="background-color: #C0D121;"><span>#python</span></div>
+                </div>
             </div>
-            <img class="child" alt="child" src="./image/girl.png">
+            <img class="child" alt="child" src="./image/girl_1_change.png">
         </div>
-        <div class="second_part">
+        <div class="second_part" id="second_part">
             <div class="ad_block">
-                <h2>5 полных<br>курсов</h2>
-                <p class="text">Обучение в игровом формате в знакомых детям условиях</p>
+                <h2 class="text_white">5 полных<br>курсов</h2>
+                <p class="text text_white">Обучение в игровом<br>формате в знакомых<br>детям условиях</p>
             </div>
             <div class="ad_block">
-                <h2>Группы до 4 человек</h2>
-                <p class="text">Удобные группы для персонального подхода к каждому ребенку</p>
+                <h2 class="text_white">Группы до 4<br>человек</h2>
+                <p class="text text_white">Удобные группы для<br>персонального подхода<br>к каждому ребенку</p>
             </div>
             <div class="ad_block">
-                <h2>Занятия по<br>1,5 часа</h2>
-                <p class="text">Ваш ребенок не успеет устать и не будет много сидеть за компьютером</p>
+                <h2 class="text_white">Занятия по<br>1,5 часа</h2>
+                <p class="text text_white">Ваш ребенок не успеет<br>устать и не будет много<br>сидеть за компьютером</p>
             </div>
         </div>
-        <div class="third_part">
-            <img alt="learning" class="learn" src="./image/man.png">
+        <div class="third_part" id="third_part">
+            <div>
+                <img alt="learning" class="learn" src="./image/man_1.png">
+                <div style="display: flex; justify-content: center;">
+                    <div class="button button_less" style="background-color: #F36A8D; display: flex; "><span style="margin: auto;">#Unity</div></span>
+                    <div class="button button_less" style="margin:auto 15px; background-color: #F5BE27; display: flex; "><span style="margin: auto;">#Unreal_Engine</span></div>
+                    <div class="button button_less" style="background-color: #C0D121; display: flex; "><span style="margin: auto;">#python</span></div>
+                </div>
+            </div>
             <div class="first_lesson">
-                <h2 style="font-family: 'Raleway';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 40px;
-                line-height: 47px;
-                margin: 0 42px;
-                text-align: left;
-                color: #8DA2FF;">Первый урок бесплатно!</h2>
-                <p class="text" style="color: #8DA2FF; text-align: left;">За 40 минут пробного урока ребёнок 
-                    и родители смогут понять: 
-                    подойдут ли занятия 
-                    программированием, а методист
-                    поможет подобрать направление 
-                    подходящее для ребенка.</p>
-                <button class="advertisment" onclick="modal = document.getElementById('modal_join')
+                <h2 style="text-align: center; margin: 0;">Первый урок<br>бесплатно!</h2>
+                <p class="text" style="text-align:left">За 40 минут пробного урока ребёнок 
+                    и родители смогут понять:
+                    <ul>
+                        <li class="text" style="text-align: left;">
+                            подойдут ли занятия программированием;
+                        </li>
+                        <li class="text" style="text-align: left; margin-top:10px;">
+                            методист
+                            поможет подобрать направление 
+                            подходящее для ребенка
+                        </li>
+                    </ul>
+                </p>
+                <button class="button" style="width: 205px;" onclick="modal = document.getElementById('modal_join')
                                                         modal.style.opacity = 1
                                                         modal.style.visibility = 'visible'">
-                    <h2 style="margin: 0; color:#8DA2FF;">Записаться</h2>
-                    <img class="arrow" alt="arrow" src="./image/arrow.JPG">
+                    <span>Записаться</span>
                 </button>
             </div>
         </div>
     </main>
     <footer>
-        <div class="footer">
+        <div class="footer" id="footer">
             <div class="contacts">
-                <span class="capt">Телефон</span>
-                <a>8-(800) 555-35-35</a>
+                <span class="text">Телефон</span>
+                <a class="text" style="margin-top: 19px; color: #A4A4A4">8-(800) 555-35-35</a>
             </div>
             <div class="contacts">
-                <span class="capt">E-mail</span>
-                <a>some_mail@gmail.com</a>
+                <span class="text">E-mail</span>
+                <a class="text" style="margin-top: 19px; color: #A4A4A4">some_mail@gmail.com</a>
             </div>
             <div class="contacts">
-                <span class="capt">График работы</span>
-                <span>ПН-ПТ: 10:00 - 19:00</span>
-                <span>СБ-ВС: 10:00 - 18:00</span>
+                <span class="text">График работы</span>
+                <span class="text" style="margin-top: 19px; color: #A4A4A4">ПН-ПТ: 10:00 - 19:00</span>
+                <span class="text" style="color: #A4A4A4">СБ-ВС: 10:00 - 18:00</span>
             </div>
             <div class="contacts">
-                <span class="capt">Наши соцсети</span>
-                <a><img atl="inst" src="./image/inst.jpg" style="width:17px"> Instagram</a>
-                <a><img atl="tg" src="./image/tg.jpg" style="width:17px"> Telegram</a>   
+                <span class="text">Наши соцсети</span>
+                <div style="display:inline-block; margin-top: 19px;"><a><img atl="inst" src="./image/inst.jpg" style="width: 38px"></a>
+                <a><img atl="tg" src="./image/tg.jpg" style="width: 38px"></a></div>
             </div>
         </div>
     </footer>
 
     <div class="modal modal_enter" id="modal_enter">
-        <div class="modal_enter_content modal_content" style="margin-top: 200px;">
-            <h2 style="color:#000000; font-size: 30px; margin: 41px 87px 5px; line-height: 35px;">Вход для учащихся</h2>
+        <div class="modal_enter_content modal_content">
+            <h2>Вход для учащихся</h2>
             <div class="taker">
-                <h4>Логин</h4>
+                <div><span class="text">Логин</span></div>
                 <input type="text" size="40">
             </div>
             <div class="taker">
-                <h4>Пароль</h4>
+                <div><span class="text">Пароль</span></div>
                 <input type="text" size="40">
             </div>
-            <button class="join"><span class="text" style="margin:auto;">Войти</span></button>
+            <button class="join" onclick="location.href='./private_page.html';"><span class="text" style="color: white; margin:auto;">Войти</span></button>
             <button class="cancel" onclick="modal = document.getElementById('modal_enter') 
                                             modal.style.opacity = 0
                                             modal.style.visibility = 'hidden'">
-                <span style="font-weight: 400; font-size: 20px; line-height: 23px; text-align: center; margin-bottom: 46px;">Отмена</span>
+                <span class="text" style="margin-bottom: 46px;">Отмена</span>
             </button>
         </div>
     </div>
 
     <div class="modal modal_join" id="modal_join">
-        <div class="modal_join_content modal_content">
-            <h2 style="color:#000000; font-size: 30px; margin: 41px 87px 5px; line-height: 35px;">Запись на бесплатное пробное занятие</h2>
+        <div class="modal_join_content modal_content" >
+            <h2>Запись на бесплатное<br>пробное занятие</h2>
             <div class="taker">
-                <h4>Имя ребенка</h4>
+                <div><span class="text">Имя ребенка</span></div>
                 <input type="text" size="40">
             </div>
             <div class="taker">
-                <h4>Имя родителя</h4>
+                <div><span class="text">Имя родителя</span></div>
                 <input type="text" size="40">
             </div>
             <div class="taker">
-                <h4>Контактный телефон</h4>
+                <div><span class="text">Контактный телефон</span></div>
                 <input type="text" size="40">
             </div>
             <div class="taker">
-                <h4>Адрес электронной почты</h4>
+                <div><span class="text">Адрес электронной почты</span></div>
                 <input type="text" size="40">
             </div>
-            <button class="join"><span class="text" style="margin:auto;">Записаться</span></button>
+            <button class="join"><span class="text" style="color:white; margin:auto;">Записаться</span></button>
             <button class="cancel" onclick="modal = document.getElementById('modal_join') 
                                             modal.style.opacity = 0
                                             modal.style.visibility = 'hidden'">
-                <span style="font-weight: 400; font-size: 20px; line-height: 23px; text-align: center; margin-bottom: 46px;">Отмена</span>
+                <span class="text" style="margin-bottom: 46px;">Отмена</span>
             </button>
         </div>
     </div>

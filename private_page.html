@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./private_page.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+    <title>Personal account</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Навбар слева -->
+        <nav class="navbar">
+            <div class="navbar_wrapper">
+                <div title="Личный кабинет" class="inn inn_active" id="inn_avatar" onclick="rewriteScript('inn_avatar', 'avatar', 0)">
+                    <img class="avatar" id="pic_avatar" style="width: 63px;" alt="avatar" src="./image/avatar_on_blue.JPG">
+                </div>
+                <div title="Мои сообщения" class="inn inn_unactive" id="inn_messages" onclick="rewriteScript('inn_messages', 'messages_inc', 1)">
+                    <img class="messages_inc" alt="messages" id="pic_messages" src="./image/mes.jpg">
+                </div>
+                <div title="Мои курсы" class="inn inn_unactive" id="inn_courses" onclick="rewriteScript('inn_courses', 'courses', 2)">
+                    <img alt="courses" id="pic_courses" src="./image/les.jpg">
+                </div>
+                <div title="Мои домашние задания" class="inn inn_unactive" id="inn_tasks" onclick="rewriteScript('inn_tasks', 'hw', 4)">
+                    <img alt="tasks" id="pic_tasks" src="./image/task.jpg">
+                </div>
+                <div title="Информация" class="inn inn_unactive" id="inn_info" onclick="modal = document.getElementById('modal_info')
+                                                                     modal.style.opacity = 1
+                                                                     modal.style.visibility = 'visible'">
+                    <img alt="info" src="./image/info.JPG"> 
+                </div>
+            </div>
+            <div title="Выйти" class="inn inn_unactive" id="inn_exit" onclick="modal = document.getElementById('modal_exit')
+                                                             modal.style.opacity = 1
+                                                             modal.style.visibility = 'visible'">
+                <img alt="exit" src="./image/exit.jpg">
+            </div>
+        </nav>
+        <main>
+
+            <!-- Основной блок содержимого -->
+            <div class="main_inner" id="main_inner">
+                <!-- Вкладка личной страницы !!! -->
+                <div class="account active" id="avatar">
+                    <div class="main_info">
+                        <img alt="avatar" src="./image/ava.JPG" style="width: 185px; height: 179px; margin-right: 30px">
+                        <div class="about_child" style="display: flex; flex-direction: column;">
+                            <h1 style="margin: 17px auto">Петькин Петя</h1>
+                            <span class="text text_grey" style="color: #A4A4A4">12 лет, Санкт-Петербург</span>
+                            <span class="text text_grey" style="color: #A4A4A4">Участник группы E3100</span>
+                        </div>
+                    </div>
+                    <!-- Инфо о себе, все регулар текст -->
+                    <div class="block_of_text" style="margin-top: 55px;">
+                        <span class="text text_grey">О себе</span>
+                        <span class="text">Люблю играть в Майнкрафт, много кушать и смотреть Рапунцель</span>
+                    </div>
+                    <div class="block_of_text">
+                        <span class="text text_grey">Родители</span>
+                        <span class="text">Петькина Юлия Валерьевна</span>
+                    </div>
+                    <div class="block_of_text">
+                        <span class="text text_grey">Телефон родителя</span>
+                        <span class="text">88005553535</span>
+                    </div>
+                    <div class="block_of_text">
+                        <span class="text text_grey">Телефон ребенка</span>
+                        <span class="text">88005553535</span>
+                    </div>
+                    <!-- Часть с курсами -->
+                    <div class="my_courses">
+                        <h2>Мои курсы</h2>
+                        <!-- Типовые вкладки с курсами -->
+                        <ul class="scroll my_course">
+                            <!-- Пример карточки для курса -->
+                            
+                            <!-- Новая карторчка для курса -->
+                            <li>
+                                <div class="course">
+                                    <div class="title">
+                                        <span class="text text_white">Создание игры в Unity</span>
+                                    </div>
+                                    <div class="card_block">
+                                        <div>
+                                            <div class="block_text">
+                                                <span class="text text_grey">Группа</span><br>
+                                                <span class="text">E3100</span>
+                                            </div>
+                                            <div class="block_text">
+                                                <span class="text text_grey">Ближайшее занятие</span>
+                                                <br>
+                                                <span class="text">01.09.22 15:30</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <button class="button button_account" onclick="rewriteScript('inn_courses', 'courses', 2)"><span class="text text_white">Перейти к курсу</span></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Неактивные карторчки  -->
+                            <li>
+                                <div class="course">
+                                    <div class="title">
+                                        <span class="text text_white">Создание игры в Unity</span>
+                                    </div>
+                                    <div class="card_block">
+                                        <div>
+                                            <div class="block_text">
+                                                <span class="text text_grey">Группа</span><br>
+                                                <span class="text">E3100</span>
+                                            </div>
+                                            <div class="block_text">
+                                                <span class="text text_grey">Ближайшее занятие</span>
+                                                <br>
+                                                <span class="text">01.09.22 15:30</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <button class="button button_account button_disabled"><span class="text text_white">Закрыто</span></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Неактывные карточки -->
+                            <li>
+                                <div class="course">
+                                    <div class="title">
+                                        <span class="text text_white">Создание игры в Unity</span>
+                                    </div>
+                                    <div class="card_block">
+                                        <div>
+                                            <div class="block_text">
+                                                <span class="text text_grey">Группа</span><br>
+                                                <span class="text">E3100</span>
+                                            </div>
+                                            <div class="block_text">
+                                                <span class="text text_grey">Ближайшее занятие</span>
+                                                <br>
+                                                <span class="text">01.09.22 15:30</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <button class="button button_account button_disabled"><span class="text text_white">Закрыто</span></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Вкладка входящих сообщений !!! Проблема выставления заднего цвета для самого сообщения и выставление сообщения внизу страницы -->
+                <div class="messages_incoming unactive" id="messages_inc">
+                    <h1 style="margin-bottom: 0">Мои сообщения</h1>
+                    <div class="messages_inner">
+                        <div class="mes_nav_bar">
+                            <div class="mes_friends mf" id="mf1" style="border-top-left-radius: 20px;" onclick="changePage('mf1', 'txt1', 'txtTxt1')">
+                                <img src="./image/birthday.png" alt="ava">
+                                <div id="wr">
+                                    <span class="text text_grey tx" id="txt1">Петя Петин</span><br>
+                                    <span class="text tx" id="txtTxt1">Ты сделал домашку?</span>
+                                </div>
+                            </div>
+                            <div class="mes_friends mf" id="mf2" onclick="changePage('mf2', 'txt2', 'txtTxt2')">
+                                <img src="./image/birthday.png" alt="ava">
+                                <div>
+                                    <span class="text text_grey tx" id="txt2">Петя Петин</span><br>
+                                    <span class="text tx"           id="txtTxt2">Ты сделал домашку?</span>
+                                </div>
+                            </div>
+                            <div class="mes_friends mf" id="mf3" onclick="changePage('mf3', 'txt3', 'txtTxt3')">
+                                <img src="./image/birthday.png" alt="ava">
+                                <div>
+                                    <span  id="txt3"    class="text text_grey tx">Петя Петин</span><br>
+                                    <span  id="txtTxt3" class="text tx">Ты сделал домашку?</span>
+                                </div>
+                            </div>
+                            <div class="mes_friends mf" id="mf4" onclick="changePage('mf4', 'txt4', 'txtTxt4')">
+                                <img src="./image/birthday.png" alt="ava">
+                                <div>
+                                    <span id="txt4" class="text text_grey tx">Петя Петин</span><br>
+                                    <span id="txtTxt4" class="text tx">Ты сделал домашку?</span>
+                                </div>
+                            </div>
+                            <div class="mes_friends mf" id="mf5" onclick="changePage('mf5', 'txt5', 'txtTxt5')">
+                                <img src="./image/birthday.png" alt="ava">
+                                <div>
+                                    <span class="text text_grey tx" id="txt5" >Петя Петин</span><br>
+                                    <span class="text tx" id="txtTxt5">Ты сделал домашку?</span>
+                                </div>
+                            </div>
+                            <div class="mes_friends mf" id="mf6" onclick="changePage('mf6', 'txt6', 'txtTxt6')">
+                                <img src="./image/birthday.png" alt="ava">
+                                <div>
+                                    <span class="text text_grey tx" id="txt6" >Петя Петин</span><br>
+                                    <span class="text tx" id="txtTxt6">Ты сделал домашку?</span>
+                                </div>
+                            </div>
+                            <div class="mes_friends mf" id="mf7" onclick="changePage('mf7', 'txt7', 'txtTxt7')">
+                                <img src="./image/birthday.png" alt="ava">
+                                <div>
+                                    <span class="text text_grey tx" id="txt7" >Петя Петин</span><br>
+                                    <span class="text tx" id="txtTxt7">Ты сделал домашку?</span>
+                                </div>
+                            </div>
+                            <div class="mes_friends mf" id="mf8" style="border-bottom-left-radius: 20px;" onclick="changePage('mf8', 'txt8', 'txtTxt8')">
+                                <img src="./image/birthday.png" alt="ava">
+                                <div>
+                                    <span class="text text_grey tx" id="txt8" >Петя Петин</span><br>
+                                    <span class="text tx" id="txtTxt8">Ты сделал домашку?</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="messages_wrap">
+                            <div class="unactive_comm" id="uc">
+                                <img src="./image/mes.JPG" alt="Message" style="width:48px; margin-bottom: 11px;">
+                                <span class="text">Выберите чат!</span>
+                            </div>
+                            <div class="active_comm" id="ac">
+
+                                <div class="mes_friends mes_h" style="justify-content: flex-start;cursor: default; border-top-right-radius: 20px; height: 85px">
+                                    <img src="./image/birthday.png" alt="Message" style="width:48px; margin-left: 22px;">
+                                    <span class="text">Петя Петин</span>
+                                </div>
+                                <div style="height: 100%; display:flex; flex-direction: column-reverse;">
+                                    <div style="width: 100%; height: 30px"></div>
+                                    <div class="message_container">
+                                        <div class="message_to">
+                                            <img src="./image/birthday.png" alt="Message" style="width:48px; height:48px; margin-left: 28px;">
+                                            <div class="bubble"><span class="text">Ты сделал домашку?</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                <div class="mes_friends mes_f" style="cursor:default; border-bottom-right-radius: 20px;">
+                                    <form>
+                                        <input class="text" type="text" style="width: 434px; height: 44px; border-radius: 10px; border:2px solid #8DA2FF; margin-right: 37px">
+                                        <input class="text button text_white" type="submit" value="Отправить">
+                                    </form>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка с курсами !!! -->
+                <div class="courses unactive" id="courses">
+                    <h1>Мои курсы</h1>
+                    <h2>Моя группа</h2>
+                    <ul class="scroll my_course">
+                        <!-- Активный курс, в котором доступны переходы -->
+                        <li>
+                            <div class="course">
+                                <div class="title">
+                                    <span class="text text_white">Unity 1/24</span>
+                                    <!-- <br> -->
+                                    <span class="text text_white">01.09.22 15:30</span>
+                                    <!-- <span class="text text_white">Группа<br>Е3100</span> -->
+                                </div>
+                                <div class="card_block">
+                                    <div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Тема</span><br>
+                                            <span class="text" style="width: 100%">Знакомство с Unity<br>Интерфейс</span>
+                                        </div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Преподаватель</span><br>
+                                            <span class="text">Лебедев Иван</span>
+                                        </div>
+                                    </div>
+                                    <button class="button button_another" onclick="rewriteScript('inn_courses', 'courses_task', 5)"><span class="text text_white">Приступить к уроку</span></button>
+                                </div>                                
+                            </div>
+                        </li>
+                        <!-- Неактивный курс, просто демонстрация -->
+                        <li>
+                            <div class="course">
+                                <div class="title">
+                                    <span class="text text_white">Unity 1/24</span>
+                                    <span class="text text_white">01.09.22 15:30</span>
+                                    <!-- <span class="text text_white">Группа<br>Е3100</span> -->
+                                </div>
+                                <div class="card_block">
+                                    <div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Тема</span><br>
+                                            <span class="text" style="width: 100%">Знакомство с Unity<br>Интерфейс</span>
+                                        </div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Преподаватель</span><br>
+                                            <span class="text">Лебедев Иван</span>
+                                        </div>
+                                    </div>
+                                    <button class="button button_another button_disabled"><span class="text text_white">Закрыто</span></button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Неактивный курс, просто демонстрация -->
+                        <li>
+                            <div class="course">
+                                <div class="title">
+                                    <span class="text text_white">Unity 1/24</span>
+                                    <span class="text text_white">01.09.22 15:30</span>
+                                </div>
+                                <div class="card_block">
+                                    <div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Тема</span><br>
+                                            <span class="text" style="width: 100%">Знакомство с Unity<br>Интерфейс</span>
+                                        </div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Преподаватель</span><br>
+                                            <span class="text">Лебедев Иван</span>
+                                        </div>
+                                    </div>
+                                    <button class="button button_another button_disabled"><span class="text text_white">Закрыто</span></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Вкладка с открытым уроком !!! -->
+                <div class="courses_task unactive" id="courses_task">
+                    <h1 style="margin-bottom: 0;">Урок 1/24 Unity</h1>
+                    <!-- <h2 class="text_grey" style="margin: 0">Группа Е3100</h2> -->
+                    <h2 style="margin: 140px auto 0">Знакомство с Unity. Интерфейс программы</h2>
+                    <span class="text text_grey">01.09.22</span>
+                    <div class="course_ex">
+                        <div class="crs">
+                            <div style="display:flex;">
+                                <div class="page active_page" onclick="rewriteScript('inn_courses', 'courses_task', 5)"><span class="text text_white">Задания</span></div>
+                                <div class="page unactive_page" onclick="rewriteScript('inn_courses', 'courses_materials', 7)"><span class="text">Материалы</span></div>
+                            </div>
+                            <div style="width: 478px;height: 3px; background-color:#8DA2FF"></div>
+                            <ul class="exercises">
+                                <li class="exerc_wrap">
+                                    <span class="h3">Задание 1</span>
+                                    <ul class="tasks">
+                                        <li>
+                                            <span class="text" style="margin-bottom: 36px">Скачайте заготовку по ссылке на вкладке “Материалы”</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="exerc_wrap">
+                                    <span class="h3">Задание 2</span>
+                                    <ul class="tasks">
+                                        <li>
+                                            <span class="text" style="margin-bottom: 8px;">Уровень 1<br>
+                                                Выставите на сцену только что загруженную мельницу и добавьте ей лопасти
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="text" style="margin-bottom: 8px;">Уровень 2<br>
+                                                Выставите по три дома и добавьте им коллайдеры
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="text" style="margin-bottom: 36px;">Уровень 3<br>
+                                                Поищите другие модели в Assets store, какие вам хотелось бы выставить на сцену
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка с открытыми материалами !!! DONE -->
+                <div class="courses_materials unactive" id="courses_materials">
+                    <h1 style="margin-bottom: 0;">Урок 1/24 Unity</h1>
+                    <!-- <h2 class="text_grey" style="margin: 0">Группа Е3100</h2> -->
+                    <h2 style="margin: 140px auto 0">Знакомство с Unity. Интерфейс программы</h2>
+                    <span class="text text_grey">01.09.22</span>
+                    <div class="course_ex">
+                        <div class="crs">
+                            <div style="display:flex;">
+                                <div class="page unactive_page" onclick="rewriteScript('inn_courses', 'courses_task', 5)"><span class="text">Задания</span></div>
+                                <div class="page active_page" onclick="rewriteScript('inn_courses', 'courses_materials', 7)"><span class="text text_white">Материалы</span></div>
+                            </div>
+                            <div style="width: 478px;height: 3px; background-color:#8DA2FF"></div>
+                            <ul class="exercises" style="margin:0;">
+                                <ul>
+                                    <li class="exerc_wrap">
+                                        <span class="h3">Заготовка к уроку</span>
+                                        <ul class="tasks">
+                                            <li><a href="https://drive.google.com/drive/folders/1meGqVzcJOWZ9Be9xMLtkTLt1Lopw2pGg?usp=sharing" class="text" style="margin-bottom: 36px; ">Ссылка</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка с дз -->
+                <div class="hw unactive" id="hw">
+                    <h1>Мои домашние задания</h1>
+                    <h2>Моя группа</h2>
+                    <ul class="scroll my_course">
+                        <!-- Активный курс, в котором доступны переходы -->
+                        <li>
+                            <div class="course">
+                                <div class="title">
+                                    <span class="text text_white">Unity 1/24</span>
+                                    <span class="text text_white">01.09.22 15:30</span>
+                                    <!-- <span class="text text_white">Группа<br>Е3100</span> -->
+                                </div>
+                                <div class="card_block">
+                                    <div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Тема</span><br>
+                                            <span class="text" style="width: 100%">Знакомство с Unity<br>Интерфейс</span>
+                                        </div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Преподаватель</span><br>
+                                            <span class="text">Лебедев Иван</span>
+                                        </div>
+                                    </div>
+                                    <button class="button button_another" onclick="rewriteScript('inn_tasks', 'actual_hw', 6)"><span class="text text_white">Домашнее задание</span></button>
+                                </div>                                
+                            </div>
+                        </li>
+                        <!-- Неактивный курс, просто демонстрация -->
+                        <li>
+                            <div class="course">
+                                <div class="title">
+                                    <span class="text text_white">Unity 1/24</span>
+                                    <span class="text text_white">01.09.22 15:30</span>
+                                </div>
+                                <div class="card_block">
+                                    <div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Тема</span><br>
+                                            <span class="text" style="width: 100%">Знакомство с Unity<br>Интерфейс</span>
+                                        </div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Преподаватель</span><br>
+                                            <span class="text">Лебедев Иван</span>
+                                        </div>
+                                    </div>
+                                    <button class="button button_another button_disabled"><span class="text text_white">Закрыто</span></button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Неактивный курс, просто демонстрация -->
+                        <li>
+                            <div class="course">
+                                <div class="title">
+                                    <span class="text text_white">Unity 1/24</span>
+                                    <span class="text text_white">01.09.22 15:30</span>
+                                    <!-- <span class="text text_white">Группа<br>Е3100</span> -->
+                                </div>
+                                <div class="card_block">
+                                    <div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Тема</span><br>
+                                            <span class="text" style="width: 100%">Знакомство с Unity<br>Интерфейс</span>
+                                        </div>
+                                        <div class="block_text">
+                                            <span class="text text_grey">Преподаватель</span><br>
+                                            <span class="text">Лебедев Иван</span>
+                                        </div>
+                                    </div>
+                                    <button class="button button_another button_disabled"><span class="text text_white">Закрыто</span></button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Вкладка с конкретным дз -->
+                <div class="actual_hw unactive" id="actual_hw">
+                    <h1 style="margin-bottom: 0;">Домашнее задание<br>к уроку 1/24 Unity E3100</h1>
+                    <h2 style="margin: 84px auto 0px">Знакомство с Unity. Интерфейс программы</h2>
+                    <span class="text text_grey">01.09.22</span>
+                    <div class="course_ex">
+                        <div class="crs">
+                            <div class="page active_page" style="cursor: default;"><span class="text text_white">Домашнее задание</span></div>
+                            <ul class="exercises"> 
+                                <li class="exerc_wrap">
+                                    <span class="h3">Уровень 1</span>
+                                    <ul class="tasks">
+                                        <li>
+                                            <span class="text">Добавьте на сцену палки из кубов и расположите их так, чтобы они образовывали костер</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="exerc_wrap">
+                                    <span class="h3">Уровень 2</span>
+                                    <ul class="tasks">
+                                        <li>
+                                            <span class="text" style="margin-bottom: 36px;">Создайте из примитивов 4 таблички и расположите их по всей сцене</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+    <!-- Модальное окно для инфо !!! -->
+    <div class="modal info" id="modal_info">
+        <div class="modal_content modal_info">
+            <div onclick="modal = document.getElementById('modal_info')
+                            modal.style.opacity = 0
+                            modal.style.visibility = 'hidden'">
+                <span class="close text">X</span>
+            </div>
+            <div>
+                <h2 style="margin-top: 0; text-align: center;">Информация</h2>
+                <div class="block_of_text block_of_text_info">
+                    <span class="text text_grey">Логин</span>
+                    <span class="text">89005553535</span>
+                </div>
+                <div class="block_of_text">
+                    <span class="text text_grey">Пароль</span>
+                    <span class="text">9005553535</span>
+                </div>
+                <div class="block_of_text">
+                    <span class="text text_grey">Договор</span>
+                    <a href="./image/man.png" download class="text">Ссылка</a>
+                </div>
+                <div class="block_of_text">
+                    <span class="text text_grey" style="margin-bottom: 4px;">Способ получения уведомлений</span>
+                    <div style="display:flex; flex-direction: column;">
+                        <div><input type="radio" id="contactChoice1"
+                            name="contact" value="email">
+                        <label for="contactChoice1">WhatsApp</label></div>
+
+                        <div><input type="radio" id="contactChoice2"
+                            name="contact" value="phone">
+                        <label for="contactChoice2">Viber</label></div>
+
+                        <div><input type="radio" id="contactChoice3"
+                            name="contact" value="mail">
+                        <label for="contactChoice3">Telegram</label></div>
+
+                        <div><input type="radio" id="contactChoice4"
+                            name="contact" value="mail">
+                        <label for="contactChoice4">VK</label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Модальное окно на выход из личного кабинета !!! -->
+    <div class="modal modal_exit" id="modal_exit">
+        <div class="modal_content" style="width: 499px; height: 263px; justify-content: space-evenly;">
+            <h2 style="margin: 0;">Хотите выйти?</h2>
+            <div>
+                <button class="button button_exit" onclick="location.href='./main.html';" style="margin-right: 16px;"><span class="text text_white">Да</span></button>
+                <button class="button button_exit button_ac_dis" onclick="modal = document.getElementById('modal_exit')
+                                                modal.style.opacity = 0
+                                                modal.style.visibility = 'hidden'">
+                    <span class="text text_white">Нет</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
